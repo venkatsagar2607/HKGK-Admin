@@ -38,12 +38,12 @@ const App = () => {
   }
 
   useEffect(() => {
-    const isLoggedIn = localStorage.getItem('adminLoggedIn'); 
-    if(!isLoggedIn) {
+    const isLoggedIn = sessionStorage.getItem('adminLoggedIn'); 
+    if(isLoggedIn !== 'true') {
       nav("/");
     }
 
-  }, []);
+  }, [nav]);
 
   useEffect(() => {
     getBookingData();

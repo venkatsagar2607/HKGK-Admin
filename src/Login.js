@@ -20,7 +20,7 @@ const App = () => {
         // Replace this with real validation or API call
         if (username === 'ntkd' && password === 'Ntkd@#123') {
             setIsLoggedIn(true);
-            localStorage.setItem('adminLoggedIn', 'true');
+            sessionStorage.setItem('adminLoggedIn', 'true');
             nav("/Admin")
 
         } else {
