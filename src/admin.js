@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { RefreshCcw, CheckCircle, XCircle, Search } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import './admin.css';
 
 const App = () => {
@@ -9,6 +10,7 @@ const App = () => {
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const nav = useNavigate();
 
   const getBookingData = async () => {
     try {
@@ -34,6 +36,14 @@ const App = () => {
     }
 
   }
+
+  useEffect(() => {
+    const isLoggedIn = localStorage.getItem('adminLoggedIn'); 
+    if(!isLoggedIn) {
+      nav("/");
+    }
+
+  }, []);
 
   useEffect(() => {
     getBookingData();
