@@ -1,6 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
 
-/* Login form container */
+/* ========================
+   General Styling
+======================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: #f3f4f6;
+}
+
+/* ========================
+   Login Form
+======================== */
 .login-container {
   max-width: 360px;
   margin: 100px auto;
@@ -11,7 +23,6 @@
   text-align: center;
 }
 
-/* Login form title */
 .login-container h2 {
   margin-bottom: 24px;
   color: #333333;
@@ -19,7 +30,6 @@
   font-size: 24px;
 }
 
-/* Inputs styling */
 .login-input {
   width: 100%;
   padding: 12px 14px;
@@ -36,7 +46,6 @@
   box-shadow: 0 0 6px rgba(74, 144, 226, 0.5);
 }
 
-/* Login button */
 .login-button {
   width: 100%;
   padding: 12px 0;
@@ -54,15 +63,167 @@
   background-color: #357ABD;
 }
 
-/* Error message */
+/* ========================
+   Error Message
+======================== */
 .error-message {
-  margin-top: 12px;
-  color: #d93025;
+  text-align: center;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  background-color: #fef2f2;
+  border: 1px solid #fca5a5;
+  color: #b91c1c;
+  border-radius: 0.5rem;
   font-weight: 500;
   font-size: 14px;
 }
 
-/* Main Container */
+.error-title {
+  font-weight: 700;
+}
+
+/* ========================
+   Admin Page Container
+======================== */
+
+.admin-top-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2.5rem;       /* space from top */
+  margin-bottom: 2rem;
+}
+
+.admin-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.search-input {
+  max-width: 20rem;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  font-size: 1rem;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  font-size: 1rem;
+  transition: background-color 200ms;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .admin-top-center {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .admin-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .search-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .search-input,
+  .search-button {
+    width: 100%;
+    max-width: 20rem;
+  }
+}
+
+
+.search-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.search-input {
+  max-width: 20rem;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  font-size: 1rem;
+}
+
+.search-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  background-color: #2563eb;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  font-size: 1rem;
+  transition: background-color 200ms;
+  width: auto;
+}
+
+@media (max-width: 640px) {
+  .admin-top-center {
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .admin-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .search-container {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+  }
+  .search-input,
+  .search-button {
+    width: 100%;
+    max-width: 20rem;
+  }
+}
+.search-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
 .admin-page-container {
   min-height: 100vh;
   background-color: #f3f4f6;
@@ -79,6 +240,7 @@
   margin-bottom: 1.5rem;
   padding: 1rem;
   background-color: #ffffff;
+  width: 100%;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
@@ -89,7 +251,9 @@
   color: #1f2937;
 }
 
-/* Search Section */
+/* ========================
+   Search Section
+======================== */
 .search-container {
   display: flex;
   flex-direction: column;
@@ -106,9 +270,7 @@
   border: 1px solid #d1d5db;
   border-radius: 0.5rem;
   box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  transition-property: border-color, box-shadow;
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 150ms, box-shadow 150ms;
 }
 
 .search-input:focus {
@@ -128,9 +290,7 @@
   font-weight: 600;
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  transition-property: background-color;
-  transition-duration: 200ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 200ms;
 }
 
 .search-button:hover {
@@ -148,58 +308,26 @@
   margin-right: 0.5rem;
 }
 
-/* Loading icon animation */
+.loading-icon {
+  animation: spin 1s linear infinite;
+}
+
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
-
   to {
     transform: rotate(360deg);
   }
 }
 
-.loading-icon {
-  animation: spin 1s linear infinite;
-}
-
-.status-approved {
-  color: #38a169;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.status-denied {
-  color: #e53e3e;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  gap: 6px;
-}
-
-
-/* Error Message */
-.error-message {
-  text-align: center;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  background-color: #fef2f2;
-  border: 1px solid #fca5a5;
-  color: #b91c1c;
-  border-radius: 0.5rem;
-}
-
-.error-title {
-  font-weight: 700;
-}
-
-/* Bookings Grid and Card */
+/* ========================
+   Booking Cards
+======================== */
 .bookings-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 @media (min-width: 640px) {
@@ -264,7 +392,26 @@
   border-radius: 0.25rem;
 }
 
-/* Action Buttons */
+/* Status Text */
+.status-approved {
+  color: #38a169;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.status-denied {
+  color: #e53e3e;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ========================
+   Buttons
+======================== */
 .button-group {
   display: flex;
   justify-content: flex-end;
@@ -276,35 +423,89 @@
 
 .approve-button,
 .deny-button {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
-  padding: 0.5rem 1rem;
-  color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-  transition-property: background-color;
-  transition-duration: 150ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 6px;
+  font-size: 0.95rem;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  color: #fff;
 }
 
 .approve-button {
-  background-color: #22c55e;
+  background: #38a169;
 }
 
 .approve-button:hover {
-  background-color: #16a34a;
+  background: #16a34a;
+}
+
+.approve-button:disabled {
+  background: #9ae6b4;
+  cursor: not-allowed;
 }
 
 .deny-button {
-  background-color: #ef4444;
+  background: #e53e3e;
 }
 
 .deny-button:hover {
-  background-color: #dc2626;
+  background: #dc2626;
 }
 
-/* No Records Message */
+.deny-button:disabled {
+  background: #feb2b2;
+  cursor: not-allowed;
+}
+
+/* ========================
+   Table Styling
+======================== */
+.tablecontainer {
+  width: 100%;
+  overflow-x: auto;
+  background: #fff;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 600px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  background: #fff;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 14px 12px;
+  text-align: left;
+  font-size: 1rem;
+}
+
+.bookings-table th {
+  background: #2d3748;
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #4a5568;
+}
+
+.bookings-table tbody tr:nth-child(even) {
+  background-color: #f7fafc;
+}
+
+.bookings-table tbody tr:hover {
+  background-color: #e2e8f0;
+}
+
+/* ========================
+   No Records
+======================== */
 .no-records {
   text-align: center;
   padding: 2rem;
@@ -324,94 +525,39 @@
   margin-top: 0.5rem;
 }
 
-.tablecontainer {
-  width: 100%;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  background: #fff;
-  border-radius: 8px;
-  margin-top: 2rem;
-}
-
-.bookings-table {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  min-width: 600px;
-  /* Ensures horizontal scroll on mobile */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
-  background: #fff;
-  font-family: 'Segoe UI', Arial, sans-serif;
-}
-
-.bookings-table th,
-.bookings-table td {
-  padding: 14px 12px;
-  text-align: left;
-  font-size: 1rem;
-}
-
-.bookings-table th {
-  background: #2d3748;
-  color: #fff;
-  font-weight: bold;
-  border-bottom: 2px solid #4a5568;
-}
-
-.bookings-table tr {
-  transition: background 0.15s;
-}
-
-.bookings-table tbody tr:nth-child(even) {
-  background-color: #f7fafc;
-}
-
-.bookings-table tbody tr:hover {
-  background-color: #e2e8f0;
-}
-
-.approve-button,
-.deny-button {
-  font-size: 0.95rem;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 5px;
-  margin-right: 8px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
-
-.approve-button {
-  background: #38a169;
-  color: #fff;
-}
-
-.approve-button:disabled {
-  background: #9ae6b4;
-  cursor: not-allowed;
-}
-
-.deny-button {
-  background: #e53e3e;
-  color: #fff;
-}
-
-.deny-button:disabled {
-  background: #feb2b2;
-  cursor: not-allowed;
-}
-
-.icon {
-  vertical-align: middle;
-  height: 18px;
-  width: 18px;
-}
-
-/* Mobile Responsive Stacked Layout */
+/* ========================
+   Mobile Responsive
+======================== */
 @media screen and (max-width: 600px) {
+  .login-container {
+    margin: 2rem 1rem;
+    padding: 1.5rem;
+  }
+
+  .login-container h2 {
+    font-size: 20px;
+  }
+
+  .login-input {
+    font-size: 15px;
+    padding: 10px 12px;
+  }
+
+  .login-button {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 1rem;
+  }
+
+  .search-input,
+  .search-button {
+    width: 100%;
+  }
 
   .bookings-table,
   .bookings-table thead,
@@ -441,7 +587,6 @@
     align-items: center;
     padding: 8px 0;
     border-bottom: 1px solid #f0f0f0;
-    position: relative;
   }
 
   .bookings-table td::before {
@@ -452,4 +597,21 @@
     margin-right: 1rem;
     font-size: 0.95rem;
   }
+
+  .button-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .approve-button,
+  .deny-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .no-records {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
 }
+

@@ -12,7 +12,7 @@ const App = () => {
 
   const getBookingData = async () => {
     try {
-      const response = await fetch('http://localhost:3001/trackAll', {
+      const response = await fetch('https://hkgk-temple-server.onrender.com/trackAll', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -48,7 +48,7 @@ const App = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('http://localhost:3001/track', {
+      const response = await fetch('https://hkgk-temple-server.onrender.com/track', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
@@ -71,22 +71,22 @@ const App = () => {
     }
   };
 
-  const updateBookingStatus = async (id, newStatus) => {
+  const updateBookingStatus = async (_id, newStatus) => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3001/updateBookingStatus', {
+      const response = await fetch('https://hkgk-temple-server.onrender.com/updateBookingStatus', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ id, status: newStatus })
+        body: JSON.stringify({ id: _id, status: newStatus })
       });
       const result = await response.json();
 
       if (result.success) {
         // Update bookings state locally to reflect only the changed booking
         setBookings(prev => prev.map(booking =>
-          booking.id === id
+          booking._id === _id
             ? { ...booking, status: newStatus }
             : booking
         ));
@@ -171,14 +171,14 @@ const App = () => {
                     {booking.status === 'pending' ? (
                       <>
                         <button
-                          onClick={() => updateBookingStatus(booking.id, 'approved')}
+                          onClick={() => updateBookingStatus(booking._id, 'approved')}
                           className="approve-button"
                           disabled={loading}
                         >
                           <CheckCircle className="icon" /> Approve
                         </button>
                         <button
-                          onClick={() => updateBookingStatus(booking.id, 'denied')}
+                          onClick={() => updateBookingStatus(booking._id, 'denied')}
                           className="deny-button"
                           disabled={loading}
                         >
